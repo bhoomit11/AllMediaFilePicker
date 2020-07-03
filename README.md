@@ -3,6 +3,10 @@ Simple picker for all type of files (Image/Video/Files), manage with permision a
 
 ![alt text](https://raw.githubusercontent.com/bhoomit11/AllMediaFilePicker/master/images/ss.png)
 
+
+This library handle all your callback from Camera gallery or file picker, also handles the permissions(CAMERA & WRITE_EXTERNAL_STORAGE) required for picker,
+Also library allowes you to open your uplaods in full screen, and allow pinch to zoom for images and play for video and open you PDF files through picker
+
 Follow below step to add this in to your project
 
 Step 1. Add the dependency
@@ -91,3 +95,12 @@ Last step but not least:
 
 This 2 result are required by view to analyze respose from result for content data and Permissions response both
 according the use, either in activity or in fragment
+
+To open your uploaded data in full screen please define below activity in your project manifest:
+
+ <!--Photo and Video Gallery full screen activity-->
+        <activity
+            android:name="com.bb.allmediafilepicker.utils.gallery.GalleryPagerActivity"
+            android:configChanges="screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
