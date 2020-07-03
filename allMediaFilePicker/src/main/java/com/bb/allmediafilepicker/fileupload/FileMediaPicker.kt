@@ -5,10 +5,13 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.media.MediaMetadataRetriever
 import android.net.Uri
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.bb.allmediafilepicker.R
@@ -92,6 +95,53 @@ class FileMediaPicker(
                 llVideoCamera.visibility = View.GONE
                 llVideoGallery.visibility = View.GONE
                 llFile.visibility = View.GONE
+
+                val ivImageCamera = it.findViewById<AppCompatImageView>(R.id.ivImageCamera)
+                val ivImageGallery = it.findViewById<AppCompatImageView>(R.id.ivImageGallery)
+                val ivVideoCamera = it.findViewById<AppCompatImageView>(R.id.ivVideoCamera)
+                val ivVideoGallery = it.findViewById<AppCompatImageView>(R.id.ivVideoGallery)
+                val ivFile = it.findViewById<AppCompatImageView>(R.id.ivFile)
+
+                ivImageCamera.backgroundTintList = ColorStateList.valueOf(
+                    getLightColor(
+                        ContextCompat.getColor(
+                            activity!!,
+                            R.color.file_upload_colorPickerPrimary
+                        )
+                    )
+                )
+                ivImageGallery.backgroundTintList = ColorStateList.valueOf(
+                    getLightColor(
+                        ContextCompat.getColor(
+                            activity,
+                            R.color.file_upload_colorPickerSecondary
+                        )
+                    )
+                )
+                ivVideoCamera.backgroundTintList = ColorStateList.valueOf(
+                    getLightColor(
+                        ContextCompat.getColor(
+                            activity,
+                            R.color.file_upload_colorPickerPrimary
+                        )
+                    )
+                )
+                ivVideoGallery.backgroundTintList = ColorStateList.valueOf(
+                    getLightColor(
+                        ContextCompat.getColor(
+                            activity,
+                            R.color.file_upload_colorPickerSecondary
+                        )
+                    )
+                )
+                ivFile.backgroundTintList = ColorStateList.valueOf(
+                    getLightColor(
+                        ContextCompat.getColor(
+                            activity,
+                            R.color.file_upload_colorPickerPrimary
+                        )
+                    )
+                )
 
                 if (action and ACTION_TYPE_CAMERA == ACTION_TYPE_CAMERA) {
                     if (mediaType and MEDIA_TYPE_IMAGE == MEDIA_TYPE_IMAGE) {
@@ -184,6 +234,54 @@ class FileMediaPicker(
                 llVideoCamera.visibility = View.GONE
                 llVideoGallery.visibility = View.GONE
                 llFile.visibility = View.GONE
+
+                val ivImageCamera = it.findViewById<AppCompatImageView>(R.id.ivImageCamera)
+                val ivImageGallery = it.findViewById<AppCompatImageView>(R.id.ivImageGallery)
+                val ivVideoCamera = it.findViewById<AppCompatImageView>(R.id.ivVideoCamera)
+                val ivVideoGallery = it.findViewById<AppCompatImageView>(R.id.ivVideoGallery)
+                val ivFile = it.findViewById<AppCompatImageView>(R.id.ivFile)
+
+                ivImageCamera.backgroundTintList = ColorStateList.valueOf(
+                    getLightColor(
+                        ContextCompat.getColor(
+                            activity!!,
+                            R.color.file_upload_colorPickerPrimary
+                        )
+                    )
+                )
+                ivImageGallery.backgroundTintList = ColorStateList.valueOf(
+                    getLightColor(
+                        ContextCompat.getColor(
+                            activity,
+                            R.color.file_upload_colorPickerSecondary
+                        )
+                    )
+                )
+                ivVideoCamera.backgroundTintList = ColorStateList.valueOf(
+                    getLightColor(
+                        ContextCompat.getColor(
+                            activity,
+                            R.color.file_upload_colorPickerPrimary
+                        )
+                    )
+                )
+                ivVideoGallery.backgroundTintList = ColorStateList.valueOf(
+                    getLightColor(
+                        ContextCompat.getColor(
+                            activity,
+                            R.color.file_upload_colorPickerSecondary
+                        )
+                    )
+                )
+                ivFile.backgroundTintList = ColorStateList.valueOf(
+                    getLightColor(
+                        ContextCompat.getColor(
+                            activity,
+                            R.color.file_upload_colorPickerPrimary
+                        )
+                    )
+                )
+
 
                 if (action and ACTION_TYPE_CAMERA == ACTION_TYPE_CAMERA) {
                     if (mediaType and MEDIA_TYPE_IMAGE == MEDIA_TYPE_IMAGE) {
@@ -531,7 +629,8 @@ class FileMediaPicker(
 
                     override fun onError(requestCode: Int, exception: Exception?) {
                         showHideProgressDialog(false)
-                        activity?.getString(R.string.error_something_went_wrong)?.showToast(activity)
+                        activity?.getString(R.string.error_something_went_wrong)
+                            ?.showToast(activity)
                     }
 
                 }
@@ -570,5 +669,16 @@ class FileMediaPicker(
         } catch (e: Exception) {
             e.printStackTrace()
         }
+    }
+
+    private fun getLightColor(color: Int): Int {
+        var a = Color.alpha(color)
+        val r = Color.red(color)
+        val g = Color.green(color)
+        val b = Color.blue(color)
+
+        a = (a * 0.25).toInt()
+
+        return Color.argb(a, r, g, b)
     }
 }

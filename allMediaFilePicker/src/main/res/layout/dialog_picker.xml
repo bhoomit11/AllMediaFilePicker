@@ -2,13 +2,15 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/rounded_corner_top_background"
     android:gravity="center"
     android:minWidth="400dp"
     android:orientation="vertical"
-    android:padding="16dp" android:tag="layout/dialog_file_picker_0" xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:padding="16dp"
+    android:tag="layout/dialog_file_picker_0">
 
     <com.bb.allmediafilepicker.utils.FlowLayout
         android:layout_width="wrap_content"
@@ -27,20 +29,20 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivImageCamera"
                 android:layout_width="@dimen/dp_60"
-                android:layout_height="@dimen/dp_60"
+                android:layout_height="wrap_content"
                 android:background="@drawable/circle_black"
-                android:backgroundTint="@color/file_upload_colorPickerSecondary"
-                android:tint="@color/file_upload_colorPickerPrimary"
                 android:padding="@dimen/dp_16"
+                android:tint="@color/file_upload_colorPickerPrimary"
                 app:srcCompat="@drawable/ic_menu_camera" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_12"
                 android:gravity="center"
-                android:text="Image\nCamera" />
+                android:text="Image\nCamera"
+                android:textSize="@dimen/sp_12" />
         </LinearLayout>
 
         <LinearLayout
@@ -53,19 +55,20 @@
 
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivImageGallery"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_60"
                 android:background="@drawable/circle_black"
-                android:backgroundTint="#40989898"
                 android:padding="@dimen/dp_16"
+                android:tint="@color/file_upload_colorPickerSecondary"
                 app:srcCompat="@drawable/ic_menu_gallery" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
-                android:textSize="@dimen/sp_12"
-                android:gravity="center"
                 android:layout_height="wrap_content"
-                android:text="Image\nGallery" />
+                android:gravity="center"
+                android:text="Image\nGallery"
+                android:textSize="@dimen/sp_12" />
         </LinearLayout>
 
         <LinearLayout
@@ -76,20 +79,20 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivVideoCamera"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_60"
                 android:background="@drawable/circle_black"
                 android:padding="@dimen/dp_16"
-                android:backgroundTint="@color/file_upload_colorPickerSecondary"
                 android:tint="@color/file_upload_colorPickerPrimary"
                 app:srcCompat="@drawable/ic_menu_video_camera" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
-                android:textSize="@dimen/sp_12"
-                android:gravity="center"
                 android:layout_height="wrap_content"
-                android:text="Video\nCamera" />
+                android:gravity="center"
+                android:text="Video\nCamera"
+                android:textSize="@dimen/sp_12" />
         </LinearLayout>
 
         <LinearLayout
@@ -100,19 +103,20 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivVideoGallery"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_60"
                 android:background="@drawable/circle_black"
                 android:padding="@dimen/dp_16"
-                android:backgroundTint="#40989898"
+                android:tint="@color/file_upload_colorPickerSecondary"
                 app:srcCompat="@drawable/ic_menu_video_gallery" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
-                android:textSize="@dimen/sp_12"
-                android:gravity="center"
                 android:layout_height="wrap_content"
-                android:text="Video\nGallery" />
+                android:gravity="center"
+                android:text="Video\nGallery"
+                android:textSize="@dimen/sp_12" />
         </LinearLayout>
 
         <LinearLayout
@@ -123,20 +127,20 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFile"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_60"
                 android:background="@drawable/circle_black"
                 android:padding="@dimen/dp_16"
-                android:backgroundTint="@color/file_upload_colorPickerSecondary"
                 android:tint="@color/file_upload_colorPickerPrimary"
                 app:srcCompat="@drawable/ic_file_white" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
-                android:textSize="@dimen/sp_12"
-                android:gravity="center"
                 android:layout_height="wrap_content"
-                android:text="File" />
+                android:gravity="center"
+                android:text="File"
+                android:textSize="@dimen/sp_12" />
         </LinearLayout>
     </com.bb.allmediafilepicker.utils.FlowLayout>
 
