@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corner_top_background"
+    android:gravity="center"
+    android:minWidth="400dp"
+    android:orientation="vertical"
+    android:padding="16dp" android:tag="layout/dialog_file_picker_0" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.bb.allmediafilepicker.utils.FlowLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_22"
+        android:layout_marginBottom="@dimen/dp_22"
+        android:orientation="horizontal"
+        app:flChildSpacing="@dimen/dp_22"
+        app:flRowSpacing="@dimen/dp_8">
+
+        <LinearLayout
+            android:id="@+id/llImageCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:background="@drawable/circle_black"
+                android:backgroundTint="@color/file_upload_colorPickerSecondary"
+                android:tint="@color/file_upload_colorPickerPrimary"
+                android:padding="@dimen/dp_16"
+                app:srcCompat="@drawable/ic_menu_camera" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:gravity="center"
+                android:text="Image\nCamera" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llImageGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:background="@drawable/circle_black"
+                android:backgroundTint="#40989898"
+                android:padding="@dimen/dp_16"
+                app:srcCompat="@drawable/ic_menu_gallery" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Image\nGallery" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llVideoCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:background="@drawable/circle_black"
+                android:padding="@dimen/dp_16"
+                android:backgroundTint="@color/file_upload_colorPickerSecondary"
+                android:tint="@color/file_upload_colorPickerPrimary"
+                app:srcCompat="@drawable/ic_menu_video_camera" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Video\nCamera" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llVideoGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:background="@drawable/circle_black"
+                android:padding="@dimen/dp_16"
+                android:backgroundTint="#40989898"
+                app:srcCompat="@drawable/ic_menu_video_gallery" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Video\nGallery" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:background="@drawable/circle_black"
+                android:padding="@dimen/dp_16"
+                android:backgroundTint="@color/file_upload_colorPickerSecondary"
+                android:tint="@color/file_upload_colorPickerPrimary"
+                app:srcCompat="@drawable/ic_file_white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="File" />
+        </LinearLayout>
+    </com.bb.allmediafilepicker.utils.FlowLayout>
+
+</LinearLayout>

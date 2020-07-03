@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="crop_toolbar_color">#000000</color>
+    <color name="crop_statusbar_color">#000000</color>
+
+
+    <color name="file_upload_colorPickerSecondary">#ff0000</color>
+    <color name="file_upload_colorPickerPrimary">#c6c6c6</color>
+    <color name="colorBlackTransparentOverLay">#73000000</color>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msg_invalid_video">Video format not supported, invalid type</string>
+    <string name="please_wait_while_video_is_being_compressed">Please wait while video is being compressed</string>
+    <string name="error_something_went_wrong">Something went wrong, Please try again in a while</string>
+    <string name="file_picker">File Picker</string>
+</resources>
