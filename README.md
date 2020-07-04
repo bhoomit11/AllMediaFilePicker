@@ -9,7 +9,7 @@ Also library allowes you to open your uplaods in full screen, and allow pinch to
 
 Follow below step to add this in to your project
 
-Step 1. Add the dependency
+#### Step 1. Add the dependency
 
    	allprojects {
 		repositories {
@@ -19,21 +19,21 @@ Step 1. Add the dependency
 	}
 
 
-Step 2. Add it in your root build.gradle at the end of repositories:
+#### Step 2. Add it in your root build.gradle at the end of repositories:
 
     dependencies {
     	implementation 'com.github.bhoomit11:AllMediaFilePicker:1.0.1'
     }
   
 
-Step 3. Add this view in your XML file
+#### Step 3. Add this view in your XML file
     
     <com.bb.allmediafilepicker.fileupload.FileUploadView
             android:id="@+id/fileUploadView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-Step 4. Initialize and configure
+#### Step 4. Initialize and configure
 
     binding.fileUploadView.setupWithActivityOrFragment(
             activity = this@FilePickerActivity,
@@ -58,17 +58,17 @@ Read below description to understand use of every attributes:
 
 3.fileUploadModel: Configuration model defines all configuration of a view
 ```
-a.Title: Title of a view, as like title "Attachment" in screen shot above
-b.minFilesCount: number of file you required minimum in your view
-c.maxFilesCount: number of file you required maximum in your view, after maximu number of upload it won't allow you more
-d.requiresCrop: give true if you want crop feature after image pick (Default false)
-e.requiresVideoCompress: give true if you required video compress on video upload(Default false)
-f.mediaType: this here is the main configuration, here in example `MediaPicker.MEDIA_TYPE_IMAGE or MediaPicker.MEDIA_TYPE_VIDEO` defines that you requre Image and Video both in this picker view,
+a. Title: Title of a view, as like title "Attachment" in screen shot above
+b. minFilesCount: number of file you required minimum in your view
+c. maxFilesCount: number of file you required maximum in your view, after maximu number of upload it won't allow you more
+d. requiresCrop: give true if you want crop feature after image pick (Default false)
+e. requiresVideoCompress: give true if you required video compress on video upload(Default false)
+f. mediaType: this here is the main configuration, here in example `MediaPicker.MEDIA_TYPE_IMAGE or MediaPicker.MEDIA_TYPE_VIDEO` defines that you requre Image and Video both in this picker view,
 if only image picker needed pass `MediaPicker.MEDIA_TYPE_IMAGE`, if file and Image pass `MediaPicker.MEDIA_TYPE_IMAGE or MediaPicker.MEDIA_TYPE_OTHER` and so on.
-g.action: if you need only Camera pick then provide only `MediaPicker.ACTION_TYPE_CAMERA` here in example both camera and gallery needed so I pass both, In case of File pick pass `ACTION_TYPE_FILE`
+g. action: if you need only Camera pick then provide only `MediaPicker.ACTION_TYPE_CAMERA` here in example both camera and gallery needed so I pass both, In case of File pick pass `ACTION_TYPE_FILE`
 ```
   
-Last step but not least:
+#### Last step but not least:
 
     /**
      * To give media response back to file upload view
@@ -108,7 +108,7 @@ To change the color of picker ICONs you can override as below in you colors.xml 
     <color name="file_upload_colorPickerPrimary" tools:override="true">#03DAC5</color>
     <color name="file_upload_colorPickerSecondary" tools:override="true">#999999</color>
     
-# License
+#### License
 
     Copyright 2020 Bhoomit Belani
 
