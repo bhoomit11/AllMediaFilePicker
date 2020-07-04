@@ -31,10 +31,7 @@ Step 3. Add this view in your XML file
     <com.bb.allmediafilepicker.fileupload.FileUploadView
             android:id="@+id/fileUploadView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_8"
-            android:layout_marginLeft="@dimen/dp_8"
-            android:layout_marginBottom="@dimen/dp_8" />
+            android:layout_height="wrap_content" />
 
 Step 4. Initialize and configure
 
@@ -104,3 +101,9 @@ To open your uploaded data in full screen please define below activity in your p
             android:configChanges="screenLayout|screenSize|orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
+	    
+	    
+To change the color of picker ICONs you can override as below in you colors.xml file
+
+    <color name="file_upload_colorPickerPrimary" tools:override="true">#03DAC5</color>
+    <color name="file_upload_colorPickerSecondary" tools:override="true">#999999</color>
