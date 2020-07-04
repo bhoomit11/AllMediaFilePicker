@@ -1,5 +1,5 @@
 # AllMediaFilePicker
-Simple picker for all type of files (Image/Video/Files), manage with permision and callbacks
+Simple picker for all type of files (Image/Video/Files), managed with permission and callbacks
 
 ![alt text](https://raw.githubusercontent.com/bhoomit11/AllMediaFilePicker/master/images/ss.png)
 
@@ -40,7 +40,7 @@ Follow below step to add this in to your project
     	    fragment = this@FilePickerFragment,
             fileUploadModel = FileUploadModel(
                 title = "Attachments",
-                minFilesCount = 1,           //
+                minFilesCount = 1,           
                 maxFilesCount = 2,
                 requiresCrop = false,
                 requiresVideoCompress = true,
