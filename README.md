@@ -37,12 +37,12 @@ Follow below step to add this in to your project
 
     binding.fileUploadView.setupWithActivityOrFragment(
             activity = this@FilePickerActivity,
-    	    fragment = this@FilePickerFragment,
+	    fragment = this@FilePickerFragment,
             fileUploadModel = FileUploadModel(
                 title = "Attachments",
 		allowMultipleImages = true
                 minFilesCount = 1,           
-                maxFilesCount = 2,
+		maxFilesCount = 2,
                 requiresCrop = false,
                 requiresVideoCompress = true,
                 mediaType = MediaPicker.MEDIA_TYPE_IMAGE or MediaPicker.MEDIA_TYPE_VIDEO,
