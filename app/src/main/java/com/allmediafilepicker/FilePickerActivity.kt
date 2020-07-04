@@ -26,7 +26,8 @@ class FilePickerActivity : AppCompatActivity() {
                 customRequestCode = 123,
                 minFilesCount = 1,
                 maxFilesCount = 2,
-                requiresCrop = false,
+                allowMultipleImages = false,
+                requiresCrop = true,
                 requiresVideoCompress = true,
                 mediaType = MediaPicker.MEDIA_TYPE_IMAGE or MediaPicker.MEDIA_TYPE_VIDEO,
                 action = MediaPicker.ACTION_TYPE_CAMERA or MediaPicker.ACTION_TYPE_GALLERY

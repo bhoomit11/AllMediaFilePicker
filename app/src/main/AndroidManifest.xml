@@ -22,12 +22,6 @@
             </intent-filter>
         </activity>
 
-        <!--Photo and Video Gallery activity-->
-        <activity
-            android:name="com.bb.allmediafilepicker.utils.gallery.GalleryPagerActivity"
-            android:configChanges="screenLayout|screenSize|orientation"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
     </application>
 
 </manifest>

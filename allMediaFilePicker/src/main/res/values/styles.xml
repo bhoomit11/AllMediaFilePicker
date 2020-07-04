@@ -18,4 +18,11 @@
         <item name="android:statusBarColor" tools:ignore="NewApi">#F5F6FC</item>
     </style>
 
+    <style name="UCROPTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/crop_statusbar_color</item>
+        <item name="colorPrimaryDark">@color/crop_statusbar_color</item>
+        <item name="colorAccent">@color/crop_toolbar_color</item>
+
+    </style>
 </resources>

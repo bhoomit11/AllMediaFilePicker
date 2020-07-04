@@ -1,6 +1,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.bb.allmediafilepicker">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+
+    <application>
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/UCROPTheme" />
+
+        <activity
+            android:name="com.bb.allmediafilepicker.utils.gallery.GalleryPagerActivity"
+            android:configChanges="screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name="com.master.basediproject.utils.filepicker.FilePickerActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
 </manifest>
