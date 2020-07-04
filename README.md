@@ -40,6 +40,7 @@ Follow below step to add this in to your project
     	    fragment = this@FilePickerFragment,
             fileUploadModel = FileUploadModel(
                 title = "Attachments",
+		allowMultipleImages = true
                 minFilesCount = 1,           
                 maxFilesCount = 2,
                 requiresCrop = false,
@@ -58,14 +59,15 @@ Read below description to understand use of every attributes:
 
 3.fileUploadModel: Configuration model defines all configuration of a view
 ```
-a. Title: Title of a view, as like title "Attachment" in screen shot above
-b. minFilesCount: number of file you required minimum in your view
-c. maxFilesCount: number of file you required maximum in your view, after maximu number of upload it won't allow you more
-d. requiresCrop: give true if you want crop feature after image pick (Default false)
-e. requiresVideoCompress: give true if you required video compress on video upload(Default false)
-f. mediaType: this here is the main configuration, here in example `MediaPicker.MEDIA_TYPE_IMAGE or MediaPicker.MEDIA_TYPE_VIDEO` defines that you requre Image and Video both in this picker view,
+1. Title: Title of a view, as like title "Attachment" in screen shot above
+2. allowMultipleImages: pass true if you want to pick multiple images from gallery (Crop not allowed in this case)
+3. minFilesCount: number of file you required minimum in your view
+4. maxFilesCount: number of file you required maximum in your view, after maximu number of upload it won't allow you more
+5. requiresCrop: give true if you want crop feature after image pick (Default false)
+6. requiresVideoCompress: give true if you required video compress on video upload(Default false)
+7. mediaType: this here is the main configuration, here in example `MediaPicker.MEDIA_TYPE_IMAGE or MediaPicker.MEDIA_TYPE_VIDEO` defines that you requre Image and Video both in this picker view,
 if only image picker needed pass `MediaPicker.MEDIA_TYPE_IMAGE`, if file and Image pass `MediaPicker.MEDIA_TYPE_IMAGE or MediaPicker.MEDIA_TYPE_OTHER` and so on.
-g. action: if you need only Camera pick then provide only `MediaPicker.ACTION_TYPE_CAMERA` here in example both camera and gallery needed so I pass both, In case of File pick pass `ACTION_TYPE_FILE`
+8. action: if you need only Camera pick then provide only `MediaPicker.ACTION_TYPE_CAMERA` here in example both camera and gallery needed so I pass both, In case of File pick pass `ACTION_TYPE_FILE`
 ```
   
 #### Last step but not least:
@@ -92,16 +94,6 @@ g. action: if you need only Camera pick then provide only `MediaPicker.ACTION_TY
 
 This 2 result are required by view to analyze respose from result for content data and Permissions response both
 according the use, either in activity or in fragment
-
-To open your uploaded data in full screen please define below activity in your project manifest:
-
- <!--Photo and Video Gallery full screen activity-->
-        <activity
-            android:name="com.bb.allmediafilepicker.utils.gallery.GalleryPagerActivity"
-            android:configChanges="screenLayout|screenSize|orientation"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
-	    
 	    
 To change the color of picker ICONs you can override as below in you colors.xml file
 
