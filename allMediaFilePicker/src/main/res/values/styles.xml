@@ -5,7 +5,7 @@
         <item name="android:windowNoTitle">true</item>
 
         <!-- Set this to true if you want Full Screen without status bar -->
-        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowFullscreen">true</item>
 
         <item name="android:windowIsFloating">false</item>
 
@@ -15,7 +15,6 @@
         <!-- Additionally if you want animations when dialog opening -->
         <item name="android:windowEnterAnimation">@anim/dialog_fade_in</item>
         <item name="android:windowExitAnimation">@anim/dialog_fade_out</item>
-        <item name="android:statusBarColor" tools:ignore="NewApi">#F5F6FC</item>
     </style>
 
     <style name="UCROPTheme" parent="Theme.AppCompat.NoActionBar">

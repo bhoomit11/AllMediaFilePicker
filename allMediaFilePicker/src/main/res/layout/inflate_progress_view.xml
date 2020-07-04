@@ -25,11 +25,12 @@
                 android:layout_height="@dimen/dp_60" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/sp_8"
-                android:text="@string/please_wait_while_video_is_being_compressed"
+                android:text="@string/please_wait_while_video_is_being_processsed"
                 android:textColor="@color/white" />
         </LinearLayout>
     </FrameLayout>

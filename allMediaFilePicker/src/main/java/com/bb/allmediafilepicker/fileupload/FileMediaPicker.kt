@@ -398,6 +398,9 @@ class FileMediaPicker(
                         .enableDebuggingMode(true)
                         .requestCode(customRequestCode * VIDEO_PICKER_REQUEST_CODE)
                         .build()
+                    if (requiresVideoCompress) {
+                        showHideProgressDialog(true)
+                    }
                 }
                 R.id.llVideoGallery -> {
                     VideoPicker.Builder(tempActivity)
@@ -407,6 +410,9 @@ class FileMediaPicker(
                         .enableDebuggingMode(true)
                         .requestCode(customRequestCode * VIDEO_PICKER_REQUEST_CODE)
                         .build()
+                    if (requiresVideoCompress) {
+                        showHideProgressDialog(true)
+                    }
                 }
                 R.id.llFile -> {
 
@@ -427,6 +433,7 @@ class FileMediaPicker(
     }
 
     fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        showHideProgressDialog(false)
         if (requestCode == customRequestCode * IMAGE_PICKER_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             val mPaths =
                 data?.getSerializableExtra(ImagePicker.EXTRA_IMAGE_PATH) as ArrayList<String>
@@ -660,14 +667,13 @@ class FileMediaPicker(
                 if (progressDialogFragment?.dialog == null || progressDialogFragment?.dialog?.isShowing == false || progressDialogFragment?.isAdded == false) {
                     progressDialogFragment?.show(
                         fragment?.childFragmentManager ?: activity?.supportFragmentManager!!,
-                        javaClass.simpleName
+                        javaClass.name
                     )
                 }
             } else {
                 progressDialogFragment?.dismissAllowingStateLoss()
             }
         } catch (e: Exception) {
-            e.printStackTrace()
         }
     }
 
