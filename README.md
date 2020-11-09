@@ -36,9 +36,9 @@ Follow below step to add this in to your project
 #### Step 4. Initialize and configure
 
     binding.fileUploadView.setupWithActivityOrFragment(
-            activity = this@FilePickerActivity,
-	    fragment = this@FilePickerFragment,
-            fileUploadModel = FileUploadModel(
+    	activity = this@FilePickerActivity,
+	fragment = this@FilePickerFragment,
+	fileUploadModel = FileUploadModel(
 		    title = "Attachments",
 		    allowMultipleImages = true
 		    minFilesCount = 1,
