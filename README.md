@@ -44,8 +44,7 @@ Follow below step to add this in to your project
                 minFilesCount = 1,           
 		maxFilesCount = 2,
                 requiresCrop = false,
-                requiresVideoCompress = true,
-                mediaType = MediaPicker.MEDIA_TYPE_IMAGE or MediaPicker.MEDIA_TYPE_VIDEO,
+		mediaType = MediaPicker.MEDIA_TYPE_IMAGE or MediaPicker.MEDIA_TYPE_VIDEO,
                 action = MediaPicker.ACTION_TYPE_CAMERA or MediaPicker.ACTION_TYPE_GALLERY
             )
         )
