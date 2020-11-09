@@ -39,7 +39,7 @@ Follow below step to add this in to your project
             activity = this@FilePickerActivity,
 	    fragment = this@FilePickerFragment,
             fileUploadModel = FileUploadModel(
-                title = "Attachments",
+	    	title = "Attachments",
 		allowMultipleImages = true
 		minFilesCount = 1,
 		maxFilesCount = 2,
