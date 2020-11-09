@@ -39,13 +39,13 @@ Follow below step to add this in to your project
             activity = this@FilePickerActivity,
 	    fragment = this@FilePickerFragment,
             fileUploadModel = FileUploadModel(
-	    	title = "Attachments",
-		allowMultipleImages = true
-		minFilesCount = 1,
-		maxFilesCount = 2,
-		requiresCrop = false,
-		mediaType = MediaPicker.MEDIA_TYPE_IMAGE or MediaPicker.MEDIA_TYPE_VIDEO,
-		action = MediaPicker.ACTION_TYPE_CAMERA or MediaPicker.ACTION_TYPE_GALLERY
+		    title = "Attachments",
+		    allowMultipleImages = true
+		    minFilesCount = 1,
+		    maxFilesCount = 2,
+		    requiresCrop = false,
+		    mediaType = MediaPicker.MEDIA_TYPE_IMAGE or MediaPicker.MEDIA_TYPE_VIDEO,
+		    action = MediaPicker.ACTION_TYPE_CAMERA or MediaPicker.ACTION_TYPE_GALLERY
             )
         )
 
